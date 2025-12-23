@@ -5,7 +5,7 @@ Dockerfile HEALTHCHECK is not required when you use Kubernetes.
 ### Real-world production rule
 Docker HEALTHCHECK = optional
 
-Kubernetes probes = mandatory.        [ liveness + readiness (+ startup if needed) in Kubernetes ]
+Kubernetes probes = mandatory.        [ liveness + readiness + startup ]
 
 
 
