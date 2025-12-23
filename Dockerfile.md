@@ -7,7 +7,8 @@ Docker HEALTHCHECK = optional   ❌ Don’t rely on Docker HEALTHCHECK in Kubern
 
 Kubernetes probes = mandatory.        [ liveness + readiness + startup ]
 
-
+### VOLUME
+when you use Kubernetes, you usually do not need VOLUME in your Dockerfile.
 
 
 
