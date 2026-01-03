@@ -4,8 +4,7 @@ First, log in from your EC2 terminal:
 docker login
 ```
 #### Enter:
-> Username: your Docker Hub username
->  Password: Docker Hub password or Access Token
+> Username: your Docker Hub username && Password: Docker Hub password or **Access Token**
 
 ✅ You should see: ***Login Succeeded***
 
