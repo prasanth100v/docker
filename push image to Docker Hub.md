@@ -9,7 +9,7 @@ docker login
 ✅ You should see: ***Login Succeeded***
 
 ## 2️⃣ Tag the image for Docker Hub
-Docker Hub requires this format: **<dockerhub-username>/<image-name>:tag**
+Docker Hub requires this format: <dockerhub-username>/<image-name>:tag
 > (replace with YOUR username)
 ```
 docker tag prasanth-poultry:latest prasanth100v/prasanth-poultry:latest
@@ -18,7 +18,7 @@ docker tag prasanth-poultry:latest prasanth100v/prasanth-poultry:latest
 ```
 docker images
 ```
-You should now see: ***prasanth100v/prasanth-poultry   latest***
+You should now see: **prasanth100v/prasanth-poultry   latest**
 ## 3️⃣ Push the image 🚀
 ```
 docker push prasanth100v/prasanth-poultry:latest
