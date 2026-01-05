@@ -72,9 +72,6 @@ docker images -f dangling=true
 ```
 docker image prune
 ```
-This:
-```
-✅ Removes only dangling images
-❌ Does NOT remove images in use
-```
+This:  ✅ Removes only dangling images   ❌ Does NOT remove images in use
+
 
