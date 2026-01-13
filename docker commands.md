@@ -1,4 +1,4 @@
-## 📋 docker start – Table Format When a Docker container is stopped :
+## 📋 docker start – commands When a Docker container is stopped :
 | Scenario                     | Command                                     | What it does                         | Notes                     |
 | ---------------------------- | ------------------------------------------- | ------------------------------------ | ------------------------- |
 | Start a stopped container    | `docker start sonarqube`                    | Starts an existing stopped container | Keeps same ports & config |
