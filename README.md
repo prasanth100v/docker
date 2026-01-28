@@ -42,8 +42,4 @@
 | **Multi-stage Build**  | Use multiple images to reduce size                            | Build → copy → runtime                                       |
 | **Orphan Container**   | Container not in Compose file                                 | Leftover container                                           |
 | **Dangling Image**     | Unused image without tag                                      | `<none>:<none>`                                              |
-| **OCI**                | Standard for container images                                 | Docker follows OCI standard                                  |
-
-
-
 
