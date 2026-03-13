@@ -26,11 +26,11 @@ a developer laptop, testing environment, or production server.
 
   Feature           Description
   ----------------- -------------------------------------------------
-  **Consistency**   Works the same across dev, test, and production
-  **Isolation**     Applications run in separate containers
-  **Portability**   Runs on Linux, Windows, macOS, and cloud
-  **Efficiency**    Lightweight compared to virtual machines
-  **Scalability**   Easily scale using Kubernetes or Docker Swarm
+  **Consistency** |  Works the same across dev, test, and production
+  **Isolation**    | Applications run in separate containers
+  **Portability**   |Runs on Linux, Windows, macOS, and cloud
+  **Efficiency**   | Lightweight compared to virtual machines
+  **Scalability** |  Easily scale using Kubernetes or Docker Swarm
 
 ------------------------------------------------------------------------
 
