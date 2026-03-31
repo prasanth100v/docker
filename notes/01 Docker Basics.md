@@ -59,8 +59,7 @@ It includes:
 ------------------------------------------------------------------------
 
 ## 🧾 Dockerfile
-
-A **Dockerfile** is a script containing instructions to build a **Docker Image**. A Dockerfile is  is a script inside dockerfile set of/ instructions used to build a Docker image. It defines everything needed to create a container.
+A **Dockerfile** is a set of instructions instructions to build a **Docker Image**. Inside dockerfile set of/ instructions used to build a Docker image. It defines everything needed to create a container.
 
 ### It defines:
 -   Base Image (Ubuntu, Node.js, Python)
@@ -70,7 +69,6 @@ A **Dockerfile** is a script containing instructions to build a **Docker Image**
 -   Commands to run inside container
 
 ### Example
-
 ``` dockerfile
 FROM node:18
 WORKDIR /app
