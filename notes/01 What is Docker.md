@@ -106,4 +106,124 @@ Features:
 -   Auto scaling & Self healing
 -   Load balancing & Rolling updates
 
+------------------------------------------------------------------------
+
+## 🚀 Difference Between Docker Container and VM
+
+### 🟢 Docker Containers
+- Docker containers are lightweight and start quickly because they share the Host OS kernel 🚀.  
+- Example:⚡If you're using Ubuntu and you install Docker on it, then Ubuntu is the Host OS. All Docker containers will run on top of Ubuntu's kernel.
+
+### 🔴 Virtual Machines (VMs)
+- 🐢 VMs are heavier because each one runs its own OS through a hypervisor.
+
+---
+
+## 📥 docker pull vs docker run
+### 📥 docker pull
+ * ⬇️ Downloads image from registry
+ *  ❌ Does NOT start container
+
+ 👉 Example:
+  ```bash
+   docker pull nginx
+  ```
+
+### ▶️ docker run
+- 🏃 Creates & starts a container  
+- Example:
+```bash
+docker run -d nginx
+```
+
+### 💡 Simple Analogy
+📥 docker pull = Download app , ▶️ docker run = Install + Start app
+
+---
+
+## 🛠️ Debugging Docker Containers
+
+### 📄 View Logs
+```bash
+docker logs <container-name>
+```
+
+### 💻 Access Container
+```bash
+docker exec -it <container-name> /bin/sh
+```
+
+### 🔍 Inspect Container
+```bash
+docker inspect <container-name>
+```
+
+---
+
+## 🔐 Scanning Docker Images
+
+### 🧪 docker scan
+```bash
+docker scan <image-name>
+```
+
+### ⚡ Trivy
+```bash
+trivy image <image-name>
+```
+
+### ✔️ What it checks:
+- OS vulnerabilities  
+- App dependencies (npm, pip)  
+- Misconfigurations & secrets  
+
+---
+
+## 🔎 What is Trivy?
+
+- Open-source vulnerability scanner 🔓  
+- Fast & lightweight ⚡  
+- Works in CI/CD pipelines  
+- No external services needed  
+
+---
+
+## 📥 Install Trivy (Linux)
+
+```bash
+sudo apt install wget
+wget https://github.com/aquasecurity/trivy/releases/latest/download/trivy_0.49.1_Linux-64bit.deb
+sudo dpkg -i trivy_0.49.1_Linux-64bit.deb
+```
+
+Check version:
+```bash
+trivy --version
+```
+
+---
+
+## ▶️ Run a Docker Container
+
+```bash
+docker run -d -p 8080:80 --name my_container nginx
+```
+
+### 📌 Options:
+- `-d` → Run in background  
+- `-p` → Port mapping  
+- `--name` → Container name  
+
+---
+
+## 📉 Reduce Docker Image Size
+
+- Use minimal base image (Alpine) 🪶  
+- Combine RUN commands  
+- Remove unnecessary files  
+- Use `.dockerignore`  
+
+---
+
+✨ *Happy Learning DevOps!* ✨
 
