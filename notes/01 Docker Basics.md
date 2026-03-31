@@ -50,6 +50,7 @@ It includes:
   * A **Docker Container** is a Lightweight, Isolated and ecutable unit, It runs an application with all required dependencies.
   * It is created from a Docker image and ensures that the application runs the same in any environment.
   * Containers are widely used in microservices architecture for easy deployment and scalability.
+  * Docker simplifies application deployment by packaging everything into containers.
 
 ### Benefits
 -   Consistent runtime environment
@@ -80,93 +81,29 @@ CMD ["npm","start"]
 ------------------------------------------------------------------------
 
 ## ⚙️ Docker Compose
+**Docker Compose** Used for managing **multiple containers** in a single machine, Using a single YAML file (docker-compose.yml)
 
-**Docker Compose** is used to run **multiple containers together**.
-
-It uses a configuration file:
-
-    docker-compose.yml
-
-### Example
-
-``` yaml
-version: "3"
-services:
-  web:
-    image: nginx
-    ports:
-      - "80:80"
-  redis:
-    image: redis
-```
-
-Benefits:
-
--   Manage multiple containers
--   Start everything with one command
--   Simplifies development environments
-
-------------------------------------------------------------------------
 
 ## ☁️ Docker Hub
-
 **Docker Hub** is a **cloud-based repository** for Docker images.
 
 You can:
-
 -   Store images
 -   Share images
--   Download public images
-
-Example:
-
-    docker pull nginx
+-   Download public images = Example: docker pull nginx
 
 ------------------------------------------------------------------------
 
 ## 🔗 Container Orchestration
 
 ### Docker Swarm
-
-Docker's **built-in orchestration tool** used for:
-
--   Clustering containers
--   Load balancing
--   Scaling services
-
-------------------------------------------------------------------------
+   Docker's **built-in orchestration tool** for clustering and scaling containers. 
 
 ### Kubernetes (K8s)
-
-**Kubernetes** is a powerful container orchestration platform used for
-large-scale deployments.
+**Kubernetes** is a powerful container orchestration platform used for large-scale deployments.
 
 Features:
+-   Auto scaling & Self healing
+-   Load balancing & Rolling updates
 
--   Auto scaling
--   Self healing
--   Load balancing
--   Rolling updates
 
-------------------------------------------------------------------------
-
-## 🎯 Summary
-
-Docker simplifies application deployment by packaging everything into
-containers.
-
-Main Components:
-
--   Docker
--   Docker Images
--   Docker Containers
--   Dockerfile
--   Docker Compose
--   Docker Hub
--   Docker Swarm
--   Kubernetes
-
-------------------------------------------------------------------------
-
-⭐ **Docker enables faster development, reliable deployments, and
-scalable applications.**
