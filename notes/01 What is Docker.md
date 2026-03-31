@@ -142,54 +142,48 @@ docker run -d nginx
 ---
 
 ## 🛠️ Debugging Docker Containers
+To debug a container, I check the logs with docker logs, use docker exec to go inside the container, and docker inspect to view its configuration and settings.
 
-### 📄 View Logs
 ```bash
-docker logs <container-name>
+docker logs <container-name>                 # 📄 View Logs
+
+docker exec -it <container-name> /bin/sh     # 💻 Access Container : Open terminal inside the container to check files, processes, or configs
+
+docker inspect <container-name>              # 🔍 Inspect Container : Shows low-level info like environment variables, network settings, mounts, etc. 
 ```
 
-### 💻 Access Container
+## 🔐 Scanning Docker Images for Vulnerabilities (docker scan, Trivy)
+I use tools like docker scan and Trivy to check Docker images for any security issues. 
+
+### 🧪 Docker Scan :
+Scans the image for known vulnerabilities in OS packages and dependencies.
+### Example: 
 ```bash
-docker exec -it <container-name> /bin/sh
-```
-
-### 🔍 Inspect Container
-```bash
-docker inspect <container-name>
-```
-
----
-
-## 🔐 Scanning Docker Images
-
-### 🧪 docker scan
-```bash
-docker scan <image-name>
+docker scan <image-name>           # 🧪 docker scan
 ```
 
 ### ⚡ Trivy
+Trivy is fast, easy to use, and gives detailed reports on :
+- OS vulnerabilities  
+- Application dependencies (npm, pip)  
+- Misconfigurations & secrets  
+
+### Example :
 ```bash
 trivy image <image-name>
 ```
-
-### ✔️ What it checks:
-- OS vulnerabilities  
-- App dependencies (npm, pip)  
-- Misconfigurations & secrets  
+I use docker scan and Trivy to find security vulnerabilities in my Docker images. These tools help me fix known issues before pushing images to production.
 
 ---
 
 ## 🔎 What is Trivy?
-
-- Open-source vulnerability scanner 🔓  
-- Fast & lightweight ⚡  
+- Trivy is an open-source security vulnerability scanner that check the Docker images 🔓  
+- Fast & lightweight ⚡
+- Easy to use – one command scans everything   
 - Works in CI/CD pipelines  
 - No external services needed  
 
----
-
 ## 📥 Install Trivy (Linux)
-
 ```bash
 sudo apt install wget
 wget https://github.com/aquasecurity/trivy/releases/latest/download/trivy_0.49.1_Linux-64bit.deb
@@ -203,27 +197,43 @@ trivy --version
 
 ---
 
-## ▶️ Run a Docker Container
+## ▶️ How do you run a Docker container?
 
 ```bash
 docker run -d -p 8080:80 --name my_container nginx
 ```
+### 🧩 Options Explained
+- `-d` → 💤 Run in background  
+- `-p` 8080:80 → 🌐 Port mapping
+- `--name` → 🏷️ Container name
 
-### 📌 Options:
-- `-d` → Run in background  
-- `-p` → Port mapping  
-- `--name` → Container name  
+👉 Access app:
+```
+http://localhost:8080
+```
+
+## 📉 How to reduce Docker image size?
+
+- Use minimal base image (Use alpine instead of Ubuntu 👉 Smaller = Fastere) 🪶  
+- Combine RUN commands to 👉 Reduces layers
+  ```
+  RUN apt update && apt install -y curl && rm -rf /var/lib/apt/lists/*
+  ```
+- Remove unnecessary files after installation. ( Delete cache, temp files )
+- Use `.dockerignore` to exclude unwanted files. (node_modules, logs & temp files)
 
 ---
 
-## 📉 Reduce Docker Image Size
-
-- Use minimal base image (Alpine) 🪶  
-- Combine RUN commands  
-- Remove unnecessary files  
-- Use `.dockerignore`  
-
----
+## 🐳 Docker Quick Concepts
+| 🧩 Concept    | 💡 Description                         |
+| ------------- | -------------------------------------- |
+| 🐳 Containers | ⚡ Fast, lightweight, share host OS     |
+| 🖥️ VMs       | 🐢 Heavy, include full OS              |
+| 📥 `pull`     | 📦 Download image from registry        |
+| ▶️ `run`      | 🚀 Start a container                   |
+| 🛠️ Debug     | 🔍 Use `logs`, `exec`, `inspect`       |
+| 🔐 Security   | 🛡️ Scan images (`docker scan`, Trivy) |
+| 📦 Optimize   | ⚡ Use Alpine images + reduce layers    |
 
 ✨ *Happy Learning DevOps!* ✨
 
