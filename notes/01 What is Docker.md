@@ -47,7 +47,7 @@ It includes:
 ------------------------------------------------------------------------
 
 ## 📦 Docker Container
-  * A **Docker Container** is a Lightweight, Isolated and ecutable unit, It runs an application with all required dependencies.
+  * A **Docker Container** is a Lightweight, Isolated and executable unit, It runs an application with all required dependencies.
   * It is created from a Docker image and ensures that the application runs the same in any environment.
   * Containers are widely used in microservices architecture for easy deployment and scalability.
   * Docker simplifies application deployment by packaging everything into containers.
