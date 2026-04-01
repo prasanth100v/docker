@@ -15,7 +15,7 @@ docker rm <container_id>               # ❌ Remove Container
 docker rm -f <container_id>            # 💥 Force-remove a running container 
 ```
 
-## volume commands
+## 📦 volume commands
 ```
 docker volume create my_volume           # 📦 Create a named volume 
 docker volume ls                         # 📋 List all volumes
@@ -36,13 +36,13 @@ docker logs --tail 100 <container_id>         # 📊 Show last 100 lines
 docker logs --since 1h <container_id>         # ⏱️ Logs from the last hour 
 ```
 
-## Network commands
+## 🌐 Network commands
 ```
 docker network ls                      # 🌐 List all networks  
 docker network inspect <network>       # 🔎 Show network details  
 ```
 
-### Data commands
+### 💾 Data commands
 ```
 docker system df                  # 💾 Disk usage (images, containers, volumes) 
 docker system prune               # 🧹 Remove unused data  
