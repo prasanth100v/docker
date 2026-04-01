@@ -27,3 +27,14 @@ RUN npm install && npm run build
 FROM nginx:alpine
 COPY --from=builder /app/build /usr/share/nginx/html
 ```
+
+
+### 🔍 What’s Happening?
+ * 👉 First stage builds the app
+ * 👉 Second stage copies only required files
+ * 👉 Final image = lightweight + production-ready
+
+### The result?
+ * 👉 My image size dropped significantly
+ * 👉 No dev dependencies in production
+ * 👉 Much cleaner and faster deployments
