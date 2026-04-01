@@ -1,30 +1,35 @@
-# 🏷️ LABEL
+## 🏷️ LABEL
+* LABEL is used to add metadata (information) to the Docker image, like the author name, version, or description.
+* It helps with documentation and image management. Can be viewed with docker inspect
 
-LABEL is used to add metadata (information) to the Docker image, like the author name, version, or description. It helps with documentation and image management. Can be viewed with docker inspect
+🧾 Syntax : LABEL key="value"  
 
-🧾 Examples        Syntax : LABEL key="value"  
-LABEL stage="builder"        # Single Label  
-LABEL maintainer="dev@example.com"  
-      version="1.0"          # multiple labels  
+```
+LABEL stage="builder"                          # Single Label  
+LABEL maintainer="dev@example.com"    
+      version="1.0"                            # multiple labels  
       description="This is a sample image"
+```
 
 ---
 
-# 🌱 ENV
-
+## 🌱 ENV
 ENV is used to set environment variables in the Docker image. These variables are available during build and inside the running container.
-
+```
 ENV PORT=8080  
 ENV NODE_ENV=production \  
     PORT=3000 \              # Multiple Variables  
     APP_HOME=/app  
-
-WORKDIR $APP_HOME  
+```
+WORKDIR `$APP_HOME` 
 
 🔄 docker run -e VAR=value      # Override ENV at runtime  
 
-💡 Environment variables are key-value pairs used to store configuration settings.
-
+* 💡 Environment variables are key-value pairs used to store configuration settings. (Config values available inside container)
+* 💡 Use Cases:
+   * App configs
+   * Database URLs
+   * Ports
 ---
 
 # 🧪 ARG
@@ -135,3 +140,21 @@ STOPSIGNAL SIGINT      # Now, when the container is stopped, Docker sends SIGINT
 
 💡 (SIGINT (Signal Interrupt) is the signal sent when you press Ctrl+C in a terminal.  
 It tells the process: "Stop what you're doing!")
+
+
+
+
+
+
+
+🔥 Final Summary (Interview Ready)
+📄 Dockerfile = Instructions to build image
+⚡ Cache = Faster builds
+🚫 .dockerignore = Skip unwanted files
+🧱 FROM = Base image
+⚙️ RUN = Build-time commands
+📁 COPY = Copy files
+📦 ADD = COPY + extra features
+📂 WORKDIR = Set working folder
+🎨 CMD = Default runtime command
+🎯 ENTRYPOINT = Main fixed command
