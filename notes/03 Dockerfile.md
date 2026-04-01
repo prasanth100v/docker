@@ -18,6 +18,8 @@ Dockerfile is a text file with a set of instructions (e.g., FROM, RUN, COPY, CMD
     *.log
     ---
 
+---
+
 ## 🧱📦 FROM
   FROM indicates the base image for the container. It tells Docker what environment to start from, like Ubuntu, Alpine, or Python.
   ```
@@ -132,6 +134,7 @@ WORKDIR /app      # WORKDIR /app creates (if needed) and switches to /app   (�
 COPY . .          # Copies to /app  
 RUN npm install   # Runs in /app
 ```
+
 ---
 
 ## 🎨 CMD
