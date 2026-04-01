@@ -204,15 +204,14 @@ If you specify both ENTRYPOINT and CMD in the Dockerfile:
 - ENTRYPOINT is the main command. CMD provides default arguments to that command.
 ### 📌 Example:
 ```
- ENTRYPOINT ["echo"]                # CMD provides default arguments to ENTRYPOINT
- CMD ["Hello"]                      
- docker run <image>
+ ENTRYPOINT ["echo"]                
+ CMD ["Hello"]                # CMD provides default arguments to ENTRYPOINT                   
 
-# docker run <image> → Hello
-# docker run <image> → Goodbye             # Goodbye → Goodbye
+# docker run <image>            → Hello
+# docker run <image> Goodbye    → Goodbye  (Overridden Hello)
 ```
 
-## 🧠 Final Concept
+### 🧠 Final Concept
 👉 CMD vs ENTRYPOINT → ENTRYPOINT runs first because it is the main command.
 
 ---
