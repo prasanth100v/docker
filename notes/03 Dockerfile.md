@@ -103,7 +103,7 @@ COPY --from=builder /src/dist /usr/share/nginx/html      # Copy from Multi-Stage
 
 ---
 
-# 📦➕ ADD
+## 📦➕ ADD
 ADD is used to copy files/folders into the Docker image just like COPY, but it also has some extra features.
 
 ✨ Extra features of ADD:
@@ -121,7 +121,7 @@ ADD https://example.com/app.tar.gz /app/     # download from a URL
 
 ---
 
-# 📂📍 WORKDIR
+## 📂📍 WORKDIR
  * WORKDIR sets the default folder inside the Docker image where commands will run (RUN, CMD, COPY, etc.).
  * 💬 It's like saying: "From now on, we'll work in this folder inside the image."
  * working directory inside container
