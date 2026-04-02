@@ -26,9 +26,9 @@
 ### 📌 Example:
 #### 🐳 Step 1: Create a Volume
 ```
-docker volume create mydata         # Creates a named volume called mydata
+docker volume create mydata         # Creates a named volume called mydata (storage space managed by Docker)
+                                    # Location (Host Linux): `/var/lib/docker/volumes/mydata/`
 ```
-➡️ “Create a storage space managed by Docker”,  Location (Host Linux): `/var/lib/docker/volumes/mydata/`
 
 #### 🔍 Verify & Inspect Volume Path
 ```
