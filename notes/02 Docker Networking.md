@@ -10,7 +10,7 @@ Docker Networking allows containers to communicate with:
 👉 It provides **isolation, security, and flexibility**
 
 ## 🧠 Types of Docker Networks
-### 🟢 1. Bridge Network (Default) – Like Private Wi-Fi
+## 🟢 1. Bridge Network (Default) – Like Private Wi-Fi
 - Default network in Docker  
 - Containers can communicate **within the same bridge**  
 - 🚫 Not accessible outside unless port exposed (**port mapping**) 
