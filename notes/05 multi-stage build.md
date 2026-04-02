@@ -49,6 +49,12 @@ COPY --from=builder /app/build /usr/share/nginx/html            # --from=builder
   * 🛠️ Workshop (Stage 1) → Build product
   * 📦 Showroom (Stage 2) → Only display final product
 
+### How Multi-Stage Build Works (Docker)
+| 🧩 Stage        | 📌 What Happens                                                | 💡 Purpose                                   |
+| --------------- | -------------------------------------------------------------- | -------------------------------------------- |
+| 🏗️ Build Stage | ⚙️ Compile code<br>📦 Install dependencies                     | 🔧 Prepare application (heavy tools allowed) |
+| 🚀 Final Stage  | 📂 Copy required files (`.jar`, `dist`, `build`)<br>▶️ Run app | 📦 Create lightweight production image       |
+
 ---
 
 ## Real-world multi-stage Dockerfiles for different applications
