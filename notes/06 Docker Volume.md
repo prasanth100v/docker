@@ -7,7 +7,7 @@
 
 ## ❓ Why Use Volumes?
 * ⚠️ By default, containers are ephemeral (temporary) : Data inside container ❌ gets deleted when container is removed
-* ✅ Volumes allow persistent storage — data is saved even if the container is removed.
+* ✅ Volumes allow persistent storage — 👉 Data is saved outside the container, so it is not lost when the container is deleted.
 
 ## 🔑 Key Points:
 - 💾 Persistent Data — Volumes store data permanently, even if the container is deleted.  
