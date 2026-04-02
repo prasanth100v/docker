@@ -21,8 +21,7 @@
 ## 🟢 1. Named Volumes (Managed by Docker)
  * Named volumes are created and managed by Docker. 
  * You can give them a name, and Docker stores the data in its default location path : `/var/lib/docker/volumes/`.
-
-🎯 Best for: Databases (MySQL, PostgreSQL) or good for long-term persistent storage.
+ * 🎯 Best for: Databases (MySQL, PostgreSQL) or good for long-term persistent storage.
 
 ### 📌 Example:
 #### 🐳 Step 1: Create a Volume
@@ -34,7 +33,6 @@ docker volume create mydata         # Creates a named volume called mydata
 #### 🔍 Verify & Inspect Volume Path
 ```
 docker volume ls                     # 👉 You’ll see: mydata
-
 docker volume inspect mydata         # 👉 Shows: "Mountpoint": "/var/lib/docker/volumes/mydata/_data"
 ```
 
