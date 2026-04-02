@@ -1,5 +1,5 @@
 # 🐳💾 What is a Docker Volume?
- Docker Volumes are used to store data outside of the container so that it is not lost 👉 Even if a container is:
+ Docker Volumes are used to store data outside of the container so that data is not lost 👉 Even if a container is:
   * Stopped ⛔
   * Restarted 🔄
   * Deleted 🗑️
