@@ -125,29 +125,31 @@ CMD ["./app"]
 * COPY --from=builder : 👉 It copies files from a previous stage into the current stage.
 * ✅ This avoids copying unnecessary files like : source code and dependencies
 
-* Can we use multiple stages beyond two❓
+---
+
+ ### Can we use multiple stages beyond two❓
    * 👉 Yes ✅, You can use multiple stages like : Build stage, Test stage and Production stage
    * build tools : `FROM node:18 AS build` , `FROM node:18 AS test` , `FROM nginx:alpine AS prod`
 
 
-* Is Multi-Stage Build supported in all Docker versions❓
+### Is Multi-Stage Build supported in all Docker versions❓
 * 👉 Supported from Docker 17.05+., 📌 Earlier versions do not support multiple `FROM`
 
-* Can we skip a stage during build?
+### Can we skip a stage during build?
 * 👉 Yes ✅ using --target
   * `docker build --target builder -t myapp .` 👉 Builds only up to the builder stage
 
-* How does caching work in Multi-Stage Builds❓
+### How does caching work in Multi-Stage Builds❓
 * 👉 Each stage has its own cache 👉 This avoids reinstalling dependencies every time
 
-* Your Docker image size is 1.2GB for a Java application. How would you reduce it❓
+### Your Docker image size is 1.2GB for a Java application. How would you reduce it❓
   * Use multi-stage build
   * Separate build and runtime
   * Remove build tools like Apache Maven from final image
   * Use lightweight base image like Alpine
   * ✅ Result: Image size drastically reduced (e.g., ~200MB or less)
 
-* You only need a .jar file to run your app. How do you avoid shipping source code❓
+### You only need a .jar file to run your app. How do you avoid shipping source code❓
  * 👉 Use : COPY --from=builder /app/target/app.jar app.jar  -→  ✅ Only .jar copied → no source code in final image
 
 
