@@ -31,6 +31,7 @@
 
 ---
 
+
 # 🔑 Create DockerHub a Personal Access Token (PAT)
   👉 A PAT is a secure alternative to a password used for authentication. recommended for CLI operations and CI/CD pipelines.
   
