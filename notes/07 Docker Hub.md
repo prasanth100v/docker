@@ -41,12 +41,19 @@ Docker Hub is a cloud-based registry service where you can store, share, and man
 ```
 🏷️ docker tag my_image:latest username/my_image:latest  
 ```
-
 #### 👉 Format : `[ docker tag <local-image-name> <your-dockerhub-username>/<repo-name>:<tag> ]`
 
-⬆️ docker push username/my_image:latest  
+### 🔐 Step 2: Login
+```
+docker login -u YOUR_USERNAME
+```
+👉 Enter: `Username` & `Password or Token 🔑`
 
-👉 to the image with my Docker Hub username and push it using docker push
+### ⬆️ Step 3: Push Image
+```
+⬆️ docker push username/my_image:latest        # 🎉 Your image is now on Docker Hub!
+```
+> 👉 to the image with my Docker Hub username and push it using docker push
 
 ---
 
