@@ -33,7 +33,7 @@ CMD ["node", "app.js"]      # Another project, you write this Dockerfile
 
 ---
 
-## 📉 How do you reduce Docker image size?
+# 📉 How do you reduce Docker image size?
 
 To reduce Docker image size, I follow a few best practices:
 - 🪶 I use a small base image like Alpine and slim variants  `node:alpine`, `python:slim`. (Lightweight Images)
@@ -46,7 +46,7 @@ To reduce Docker image size, I follow a few best practices:
 💡 Example: in a Node.js app, I install dependencies in the first stage, build the app, and then copy only the build folder to a lightweight Nginx image.
 
 
-## 🔐 How would you secure a Dockerfile against common vulnerabilities?
+# 🔐 How would you secure a Dockerfile against common vulnerabilities?
 
 - 🪶 Use minimal base images (like alpine) to reduce the attack surface  `👉 Smaller images = fewer vulnerabilities`
 - 👤 Run as non-root user (USER instruction)  `👉 Prevents privilege escalation`
