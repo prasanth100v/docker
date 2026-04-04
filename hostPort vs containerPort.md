@@ -20,7 +20,7 @@ containerPort: 80
  * containerPort: `80`
     * App is listening on port 80 inside container
     * Only accessible within container / cluster
-    * 👉 Multiple containers can use the SAME `containerPort` 👉 but hostPort must be UNIQUE ❌ Two apps cannot use same host port
+    * Multiple containers can use the SAME `containerPort` 👉 but hostPort must be UNIQUE ❌ Two apps cannot use same host port
     * containerPort does NOT open anything  👉 It’s just information   🗣 Think: “App is ready inside”
 
 ### 2️⃣ hostPort (Expose to Outside)
@@ -45,8 +45,8 @@ docker run -p 8080:80 nginx        #👉 Same concept : Host port = 8080 & Conta
 ```
 
 
-### ⚡ One-line truth (remember this)  : `Docker runs containers., Kubernetes manages containers.`
-### ⚡ One-line rule  (memorize this)  : `Multiple apps can use the SAME containerPort. But HostPort must be DIFFERENT.`
+*⚡ One-line truth (remember this)  : `Docker runs containers., Kubernetes manages containers.`
+*⚡ One-line rule  (memorize this)  : `Multiple apps can use the SAME containerPort. But HostPort must be DIFFERENT.`
 
 📌 Example (Real Scenario) 👉 Both apps run on port 80 internally
 ```bash
@@ -66,10 +66,8 @@ docker run -p 8082:80 app2
 
 ## 🏁 Final Summary
 
-✨ containerPort → Internal communication
-✨ hostPort → External exposure
-✨ Docker → Uses -p host:container
-✨ Kubernetes → Prefer Services over hostPort
-
-
+ * ✨ containerPort → Internal communication
+ * ✨ hostPort → External
+ * ✨ Docker → Uses `-p host:container`
+ * ✨ Kubernetes → Prefer Services over hostPort
 
