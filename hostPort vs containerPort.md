@@ -44,9 +44,9 @@ containerPort: 80
 docker run -p 8080:80 nginx        #👉 Same concept : Host port = 8080 & Container port = 80
 ```
 
-
-*⚡ One-line truth (remember this)  : `Docker runs containers., Kubernetes manages containers.`
-*⚡ One-line rule  (memorize this)  : `Multiple apps can use the SAME containerPort. But HostPort must be DIFFERENT.`
+## 🔥 Key Points 
+ * ⚡ One-line truth (remember this)  : `Docker runs containers., Kubernetes manages containers.`
+ * ⚡ One-line rule  (memorize this)  : `Multiple apps can use the SAME containerPort. But HostPort must be DIFFERENT.`
 
 📌 Example (Real Scenario) 👉 Both apps run on port 80 internally
 ```bash
