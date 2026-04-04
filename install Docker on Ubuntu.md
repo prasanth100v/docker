@@ -48,7 +48,7 @@ docker ps
 systemctl status docker
 ```
 
-### 🟡 Remove Docker Completely (Start Fresh) ❌
+## 🟡 Remove Docker Completely (Start Fresh) ❌
 ```bash
 sudo systemctl stop docker
 sudo apt purge -y docker-ce docker-ce-cli containerd.io
