@@ -13,9 +13,10 @@
 ```
 docker tag prasanth-poultry:latest prasanth100v/prasanth-poultry:latest
 ```
+
 ### 🔍 Verify Image
 ```
-👉 You should see :  **prasanth100v/prasanth-poultry   latest**
+docker images               # 👉 You should see :  **prasanth100v/prasanth-poultry   latest**
 ```
 
 ## 3️⃣ Push the image 🚀
