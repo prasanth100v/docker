@@ -56,7 +56,7 @@ sudo rm -rf /var/lib/docker /var/lib/containerd
 ```
 
 
-```
+```bash
 ############################################
 # 🐳 DOCKER INSTALLATION (OFFICIAL METHOD)
 ############################################
@@ -142,7 +142,4 @@ sudo apt purge -y docker-ce docker-ce-cli containerd.io
 sudo rm -rf /var/lib/docker /var/lib/containerd
 # 💥 Delete all Docker data (containers, images, volumes)
 ```
-
-
-
 
