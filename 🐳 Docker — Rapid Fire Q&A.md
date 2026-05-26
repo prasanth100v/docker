@@ -82,3 +82,74 @@
 | 7️⃣8️⃣ | 🪶 Why use Alpine Linux images?                         | 👉 Smaller image size                                                       |
 | 7️⃣9️⃣ | 🏗️ Why use multi-stage builds?                         | 👉 Reduce final image size                                                  |
 | 8️⃣0️⃣ | ⚖️ Difference between CMD and ENTRYPOINT?               | 👉 CMD provides default args; ENTRYPOINT defines main executable            |
+
+---
+
+## 🐳 Docker Scenario-Based — Rapid Fire Q&A
+
+| #️⃣    | ❓ Question                                                                 | ✅ Answer                                                        |
+| ------ | -------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| 1️⃣    | ❌ Docker container exits immediately after starting — why?                 | 👉 Main process inside container stopped                        |
+| 2️⃣    | 🔍 How troubleshoot exited container?                                      | 👉 Check logs using `docker logs <container-id>`                |
+| 3️⃣    | 🌍 Container works locally but fails in server — reasons?                  | 👉 Environment differences, missing ports, volume/config issues |
+| 4️⃣    | 🏗️ Docker image build failing at dependency install — checks?             | 👉 Internet access, package repository, Dockerfile syntax       |
+| 5️⃣    | 🐢 Build extremely slow — optimization?                                    | 👉 Layer caching, smaller base image, multi-stage builds        |
+| 6️⃣    | 🧩 Why use multi-stage builds?                                             | 👉 Reduce final image size                                      |
+| 7️⃣    | 🌐 Application running inside container but inaccessible externally — why? | 👉 Port not exposed/mapped                                      |
+| 8️⃣    | 🔌 Correct Docker port mapping example?                                    | 👉 `docker run -p 8080:80 nginx`                                |
+| 9️⃣    | 🌍 Container cannot reach internet — checks?                               | 👉 Docker network and host firewall                             |
+| 🔟     | 💾 Data lost after container restart — reason?                             | 👉 No persistent volume mounted                                 |
+| 1️⃣1️⃣ | 📦 Solution for persistent data?                                           | 👉 Docker volumes/bind mounts                                   |
+| 1️⃣2️⃣ | 💽 Create Docker volume?                                                   | 👉 `docker volume create myvol`                                 |
+| 1️⃣3️⃣ | 📈 Docker container consuming high CPU — troubleshooting?                  | 👉 Check processes, app loops, monitor resources                |
+| 1️⃣4️⃣ | 📊 Command to monitor containers live?                                     | 👉 `docker stats`                                               |
+| 1️⃣5️⃣ | 💽 Docker server disk full — causes?                                       | 👉 Unused images, containers, volumes, logs                     |
+| 1️⃣6️⃣ | 🧹 Cleanup unused Docker resources?                                        | 👉 `docker system prune`                                        |
+| 1️⃣7️⃣ | 🔗 Two containers cannot communicate — checks?                             | 👉 Ensure same Docker network                                   |
+| 1️⃣8️⃣ | 🌉 Create custom Docker network?                                           | 👉 `docker network create mynet`                                |
+| 1️⃣9️⃣ | 🧩 Why use Docker Compose?                                                 | 👉 Manage multi-container applications                          |
+| 2️⃣0️⃣ | ▶️ Start services with Compose?                                            | 👉 `docker compose up -d`                                       |
+| 2️⃣1️⃣ | 🔍 One Compose service failing — troubleshooting?                          | 👉 Check service logs individually                              |
+| 2️⃣2️⃣ | 🚫 Why avoid running containers as root?                                   | 👉 Security risk                                                |
+| 2️⃣3️⃣ | 🛡️ Best practice for Docker image security?                               | 👉 Minimal images, vulnerability scanning, non-root users       |
+| 2️⃣4️⃣ | 📤 Docker push failing — reasons?                                          | 👉 Authentication issue, tag missing, permission denied         |
+| 2️⃣5️⃣ | 🔐 Login to Docker registry?                                               | 👉 `docker login`                                               |
+| 2️⃣6️⃣ | ☸️ Pod crashing due to Docker issue — checks?                              | 👉 Image pull, entrypoint, logs                                 |
+| 2️⃣7️⃣ | ❌ ImagePullBackOff error means?                                            | 👉 Kubernetes unable to pull image                              |
+| 2️⃣8️⃣ | 🔄 Docker build works locally but fails in CI — why?                       | 👉 Environment/dependency differences                           |
+| 2️⃣9️⃣ | 🏷️ Why tag Docker images properly?                                        | 👉 Version tracking and rollback                                |
+| 3️⃣0️⃣ | 📌 Recommended tagging strategy?                                           | 👉 Semantic versions + commit SHA                               |
+| 3️⃣1️⃣ | 🔙 New container version causing failures — action?                        | 👉 Rollback to previous stable image                            |
+| 3️⃣2️⃣ | 🚫 Why avoid `latest` tag in production?                                   | 👉 Unpredictable deployments                                    |
+| 3️⃣3️⃣ | 📜 Container logs growing too large — solution?                            | 👉 Configure log rotation                                       |
+| 3️⃣4️⃣ | 🔄 View running container logs?                                            | 👉 `docker logs -f <container>`                                 |
+| 3️⃣5️⃣ | ❤️ Container marked unhealthy — reasons?                                   | 👉 Health endpoint failing                                      |
+| 3️⃣6️⃣ | 🩺 Why use Docker HEALTHCHECK?                                             | 👉 Automatic application health monitoring                      |
+| 3️⃣7️⃣ | 📦 Docker image size too large — fixes?                                    | 👉 Alpine images, remove packages, multi-stage builds           |
+| 3️⃣8️⃣ | 🌐 Container cannot resolve service name — why?                            | 👉 DNS/network misconfiguration                                 |
+| 3️⃣9️⃣ | 🔄 Auto-restart container after crash — how?                               | 👉 `docker run --restart always`                                |
+| 4️⃣0️⃣ | 🔁 Containers restart continuously — checks?                               | 👉 App crash, env vars, health checks                           |
+| 4️⃣1️⃣ | 🗄️ App works but DB connection fails — why?                               | 👉 Wrong hostname/network configuration                         |
+| 4️⃣2️⃣ | 🔐 Secrets hardcoded in image — problem?                                   | 👉 Major security vulnerability                                 |
+| 4️⃣3️⃣ | 🛡️ Better way to manage secrets?                                          | 👉 Environment variables/secrets manager                        |
+| 4️⃣4️⃣ | 📊 How monitor Docker containers?                                          | 👉 Prometheus, Grafana, cAdvisor                                |
+| 4️⃣5️⃣ | 🪶 Why use distroless images?                                              | 👉 Smaller attack surface                                       |
+| 4️⃣6️⃣ | ⚠️ What happens if Docker daemon stops?                                    | 👉 Containers stop/manageability lost                           |
+| 4️⃣7️⃣ | 📋 List running containers?                                                | 👉 `docker ps`                                                  |
+| 4️⃣8️⃣ | 📋 List all containers?                                                    | 👉 `docker ps -a`                                               |
+| 4️⃣9️⃣ | 🔍 Inspect container details?                                              | 👉 `docker inspect <container>`                                 |
+| 5️⃣0️⃣ | 🚀 Why Docker popular in DevOps?                                           | 👉 Consistent environments + portability + scalability          |
+
+---
+
+## 🔥 Pro Tips (Interview Gold)
+
+| ⭐ Best Practice            | 💡 Why Important            |
+| -------------------------- | --------------------------- |
+| 🚫 Avoid `latest` tag      | Predictable deployments     |
+| ❤️ Use health checks       | Automatic monitoring        |
+| 💾 Use volumes             | Persistent data storage     |
+| 🛡️ Scan images with Trivy | Detect vulnerabilities      |
+| 📦 Keep images small       | Faster builds & deployments |
+| 👤 Run as non-root user    | Better security             |
+| 🧩 Use multi-stage builds  | Smaller optimized images    |
