@@ -141,7 +141,7 @@ SHELL ["/bin/bash", "-c"]      # “Use bash instead of sh”
 
 ---
 
-# 🛑 STOPSIGNAL
+## 🛑 STOPSIGNAL
   * 👉 STOPSIGNAL = Signal to stop container
   *  STOPSIGNAL instruction sets the `signal Docker` will send to the container when stopping it.
   *  By default, Docker sends `SIGTERM` to stop a container. (🧹 Graceful shutdown & 🚫 Prevent data loss)
