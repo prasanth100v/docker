@@ -2,23 +2,20 @@
 
 | #️⃣    | ❓ Question                                              | ✅ Answer                                                                    |
 | ------ | ------------------------------------------------------- | --------------------------------------------------------------------------- |
-| 1️⃣    | 🐳 What is Docker?                                      | 👉 A containerization platform used to build, package, and run applications |
-| 2️⃣    | 📦 What is a container?                                 | 👉 Lightweight isolated environment containing application + dependencies   |
-| 3️⃣    | ⚔️ Difference between container and VM?                 | 👉 Containers share host OS kernel; VMs have separate OS                    |
+| 1️⃣    | 🐳 What is Docker?                                      | 👉 A containerization platform used to `build`, `package`, and `run applications `|
+| 2️⃣    | 📦 What is a container?                                 | 👉 Lightweight isolated environment containing `application + dependencies `  |
+| 3️⃣    | ⚔️ Difference between container and VM?                 | 👉 Containers share `host OS kernel` ; VMs have `separate OS `               |
 | 4️⃣    | 🚀 Main advantage of Docker?                            | 👉 Consistency across environments                                          |
 | 5️⃣    | 🔧 Why is Docker popular in DevOps?                     | 👉 Fast deployment, portability, scalability                                |
-| 6️⃣    | 💡 One-line Docker definition?                          | 👉 Docker packages applications into portable containers                    |
-| 7️⃣    | 👨‍💻 Who created Docker?                               | 👉 Docker                                                                   |
+| 6️⃣    | 💡 One-line Docker definition?                          | 👉` Docker packages applications into portable containers  `                  |
+| 7️⃣    | 👨‍💻 Who created Docker?                                 | 👉 Docker                                                                   |
 | 8️⃣    | ⚙️ Main Docker components?                              | 👉 Docker Client, Daemon, Registry, Images, Containers                      |
-| 9️⃣    | 🔄 What is Docker Daemon?                               | 👉 Background service managing containers/images                            |
-| 🔟     | 💻 What is Docker Client?                               | 👉 CLI used to interact with Docker daemon                                  |
-| 1️⃣1️⃣ | 🌐 What is Docker Hub?                                  | 👉 Public container image registry from Docker                              |
-| 1️⃣2️⃣ | 📚 What is a Docker Registry?                           | 👉 Storage location for container images                                    |
+| 9️⃣    | 🔄 What is Docker Daemon?                               | 👉` Background service managing containers/images  `                          |
+| 🔟     | 💻 What is Docker Client?                               | 👉 CLI used to interact with Docker daemon    `                              |
+| 1️⃣1️⃣ | 🌐 What is Docker Hub?                                  | 👉 Public `container image registry from Docker  `                            |
+| 1️⃣2️⃣ | 📚 What is a Docker Registry?                           | 👉 `Storage location for container images  `                                  |
 | 1️⃣3️⃣ | 🖼️ What is a Docker image?                             | 👉 Read-only template used to create containers                             |
 | 1️⃣4️⃣ | 🔄 Difference between image and container?              | 👉 Image = template, container = running instance                           |
-| 1️⃣5️⃣ | 📃 Command to list Docker images?                       | 👉 `docker images`                                                          |
-| 1️⃣6️⃣ | 📥 Command to pull image?                               | 👉 `docker pull nginx`                                                      |
-| 1️⃣7️⃣ | ❌ Command to remove image?                              | 👉 `docker rmi nginx`                                                       |
 | 1️⃣8️⃣ | 🧱 What is image layering?                              | 👉 Docker images are built in reusable layers                               |
 | 1️⃣9️⃣ | ⚡ Benefit of Docker layers?                             | 👉 Faster builds and smaller storage usage                                  |
 | 2️⃣0️⃣ | ▶️ Command to run container?                            | 👉 `docker run nginx`                                                       |
@@ -69,14 +66,14 @@
 | 6️⃣5️⃣ | 🛡️ Common image scanning tool?                         | 👉 Trivy                                                                    |
 | 6️⃣6️⃣ | 📦 Best practice for Docker images?                     | 👉 Use minimal base images                                                  |
 | 6️⃣7️⃣ | 🚫 Why avoid running containers as root?                | 👉 Security risk                                                            |
-| 6️⃣8️⃣ | 🔄 Why Docker useful in CI/CD?                          | 👉 Consistent builds and deployments                                        |
+| 6️⃣8️⃣ | 🔄 Why Docker useful in CI/CD?                          | 👉 `Consistent builds and deployments `                                       |
 | 6️⃣9️⃣ | ☸️ Common container orchestration tool?                 | 👉 Kubernetes                                                               |
 | 7️⃣0️⃣ | 🔗 Why use Docker with Kubernetes?                      | 👉 Kubernetes manages container workloads                                   |
-| 7️⃣1️⃣ | 🏗️ Typical Docker workflow?                            | 👉 Build → Push → Deploy → Scale                                            |
+| 7️⃣1️⃣ | 🏗️ Typical Docker workflow?                            | 👉 `Build → Push → Deploy → Scale  `                                          |
 | 7️⃣2️⃣ | 📤 Command to push image to registry?                   | 👉 `docker push username/app:tag`                                           |
 | 7️⃣3️⃣ | 🔐 Command to login Docker registry?                    | 👉 `docker login`                                                           |
 | 7️⃣4️⃣ | ❌ Container exits immediately after start — why?        | 👉 Main process finished                                                    |
-| 7️⃣5️⃣ | 🌍 Docker container cannot access app externally — why? | 👉 Port mapping missing                                                     |
+| 7️⃣5️⃣ | 🌍 Docker container cannot access app externally — why? | 👉 `Port mapping missing  `                                                   |
 | 7️⃣6️⃣ | 💾 Data lost after container deletion — why?            | 👉 No volume configured                                                     |
 | 7️⃣7️⃣ | 🐢 Image build slow — improve?                          | 👉 Optimize Docker layers and caching                                       |
 | 7️⃣8️⃣ | 🪶 Why use Alpine Linux images?                         | 👉 Smaller image size                                                       |
@@ -108,8 +105,6 @@
 | 1️⃣7️⃣ | 🔗 Two containers cannot communicate — checks?                             | 👉 Ensure same Docker network                                   |
 | 1️⃣8️⃣ | 🌉 Create custom Docker network?                                           | 👉 `docker network create mynet`                                |
 | 1️⃣9️⃣ | 🧩 Why use Docker Compose?                                                 | 👉 Manage multi-container applications                          |
-| 2️⃣0️⃣ | ▶️ Start services with Compose?                                            | 👉 `docker compose up -d`                                       |
-| 2️⃣1️⃣ | 🔍 One Compose service failing — troubleshooting?                          | 👉 Check service logs individually                              |
 | 2️⃣2️⃣ | 🚫 Why avoid running containers as root?                                   | 👉 Security risk                                                |
 | 2️⃣3️⃣ | 🛡️ Best practice for Docker image security?                               | 👉 Minimal images, vulnerability scanning, non-root users       |
 | 2️⃣4️⃣ | 📤 Docker push failing — reasons?                                          | 👉 Authentication issue, tag missing, permission denied         |
@@ -118,21 +113,18 @@
 | 2️⃣7️⃣ | ❌ ImagePullBackOff error means?                                            | 👉 Kubernetes unable to pull image                              |
 | 2️⃣8️⃣ | 🔄 Docker build works locally but fails in CI — why?                       | 👉 Environment/dependency differences                           |
 | 2️⃣9️⃣ | 🏷️ Why tag Docker images properly?                                        | 👉 Version tracking and rollback                                |
-| 3️⃣0️⃣ | 📌 Recommended tagging strategy?                                           | 👉 Semantic versions + commit SHA                               |
 | 3️⃣1️⃣ | 🔙 New container version causing failures — action?                        | 👉 Rollback to previous stable image                            |
-| 3️⃣2️⃣ | 🚫 Why avoid `latest` tag in production?                                   | 👉 Unpredictable deployments                                    |
+| 3️⃣2️⃣ | 🚫 Why avoid `latest` tag in production?                                   | 👉 `Unpredictable deployments `                                   |
 | 3️⃣3️⃣ | 📜 Container logs growing too large — solution?                            | 👉 Configure log rotation                                       |
 | 3️⃣4️⃣ | 🔄 View running container logs?                                            | 👉 `docker logs -f <container>`                                 |
 | 3️⃣5️⃣ | ❤️ Container marked unhealthy — reasons?                                   | 👉 Health endpoint failing                                      |
 | 3️⃣6️⃣ | 🩺 Why use Docker HEALTHCHECK?                                             | 👉 Automatic application health monitoring                      |
 | 3️⃣7️⃣ | 📦 Docker image size too large — fixes?                                    | 👉 Alpine images, remove packages, multi-stage builds           |
 | 3️⃣8️⃣ | 🌐 Container cannot resolve service name — why?                            | 👉 DNS/network misconfiguration                                 |
-| 3️⃣9️⃣ | 🔄 Auto-restart container after crash — how?                               | 👉 `docker run --restart always`                                |
-| 4️⃣0️⃣ | 🔁 Containers restart continuously — checks?                               | 👉 App crash, env vars, health checks                           |
 | 4️⃣1️⃣ | 🗄️ App works but DB connection fails — why?                               | 👉 Wrong hostname/network configuration                         |
 | 4️⃣2️⃣ | 🔐 Secrets hardcoded in image — problem?                                   | 👉 Major security vulnerability                                 |
 | 4️⃣3️⃣ | 🛡️ Better way to manage secrets?                                          | 👉 Environment variables/secrets manager                        |
-| 4️⃣4️⃣ | 📊 How monitor Docker containers?                                          | 👉 Prometheus, Grafana, cAdvisor                                |
+| 4️⃣4️⃣ | 📊 How monitor Docker containers?                                          | 👉 Prometheus, Grafana                                         |
 | 4️⃣5️⃣ | 🪶 Why use distroless images?                                              | 👉 Smaller attack surface                                       |
 | 4️⃣6️⃣ | ⚠️ What happens if Docker daemon stops?                                    | 👉 Containers stop/manageability lost                           |
 | 4️⃣7️⃣ | 📋 List running containers?                                                | 👉 `docker ps`                                                  |
@@ -143,13 +135,12 @@
 ---
 
 ## 🔥 Pro Tips (Interview Gold)
-
-| ⭐ Best Practice            | 💡 Why Important            |
-| -------------------------- | --------------------------- |
-| 🚫 Avoid `latest` tag      | Predictable deployments     |
-| ❤️ Use health checks       | Automatic monitoring        |
-| 💾 Use volumes             | Persistent data storage     |
-| 🛡️ Scan images with Trivy | Detect vulnerabilities      |
-| 📦 Keep images small       | Faster builds & deployments |
-| 👤 Run as non-root user    | Better security             |
-| 🧩 Use multi-stage builds  | Smaller optimized images    |
+| ⭐ **Best Practice**            | 💡 **Why Important**        | 🧠 **Detailed Explanation**                        | 🚀 **Benefit**              |
+| ------------------------------ | --------------------------- | -------------------------------------------------- | --------------------------- |
+| 🚫 **Avoid `latest` tag**      | Predictable deployments     | `Clear image versions prevent unexpected updates `  | Stable releases             |
+| ❤️ **Use health checks**       | Automatic monitoring        | Detect `unhealthy containers automatically  `        | Better reliability          |
+| 💾 **Use volumes**             | Persistent data storage     | Data survives container restarts/removal           | Safer stateful apps         |
+| 🛡️ **Scan images with Trivy** | Detect vulnerabilities      | Identify `insecure packages `                       | Improved security           |
+| 📦 **Keep images small**       | Faster builds & deployments | Smaller images reduce pull/startup time            | Better performance          |
+| 👤 **Run as non-root user**    | Better security             | Reduces privilege escalation risk                  | Stronger container security |
+| 🧩 **Use multi-stage builds**  | Smaller optimized images    | Separate build/runtime stages                      | Cleaner production images   |
