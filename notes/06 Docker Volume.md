@@ -1,27 +1,27 @@
 # 🐳💾 What is a Docker Volume?
- Docker Volumes are used to store data outside of the container so that data is not lost 👉 Even if a container is:
-  * Stopped ⛔
-  * Restarted 🔄
-  * Deleted 🗑️
-  * ✅ Our data remains safe!
+ * Docker Volumes are used to store data `outside of the container` so that data is not lost 👉 Even if a container is:
+   * Stopped ⛔
+   * Restarted 🔄
+   * Deleted 🗑️
+   * ✅ Our data remains safe!
 
 ## ❓ Why Use Volumes?
-* ⚠️ By default, containers are ephemeral (temporary) : Data inside container ❌ gets deleted when container is removed
-* ✅ Volumes allow persistent storage — 👉 Data is saved outside the container, so it is not lost when the container is deleted.
+ * ⚠️ By default, containers are ephemeral (`temporary`) : Data inside container ❌ gets deleted when container is removed
+ * ✅ Volumes allow` persistent storage` — 👉 Data is saved outside the container, so it is not lost when the container is deleted.
 
 ## 🔑 Key Points:
-- 💾 Persistent Data — Volumes store data permanently, even if the container is deleted.  
-- 🔄 Data Sharing — Volumes can be shared between multiple containers.  
-- 🖥️ Host Independence — Volumes are managed by Docker, not dependent on host paths.  
-- 📦 Backup & Restore — Volumes can be backed up and restored easily.
+ - 💾 Persistent Data — Volumes store data permanently, even if the container is deleted.  
+ - 🔄 Data Sharing — Volumes can be shared between multiple containers.  
+ - 🖥️ Host Independence — Volumes are managed by Docker, not dependent on host paths.  
+ - 📦 Backup & Restore — Volumes can be backed up and restored easily.
 
 ---
 
 # 📚 There are mainly 3 types of volumes:
 ## 🟢 1. Named Volumes (Managed by Docker)
- * Named volumes are created and managed by Docker. 
- * You can give them a name, and Docker stores the data in its default location path : `/var/lib/docker/volumes/`.
- * 🎯 Best for: Databases (MySQL, PostgreSQL) or good for long-term persistent storage.
+  * Named volumes are created and `managed by Docker`. 
+  * You can give them a name, and Docker stores the data in its default location path : `/var/lib/docker/volumes/`.
+  * 🎯 Best for: Databases (`MySQL`, `PostgreSQL`) or good for long-term persistent storage.
 
 ### 📌 Example:
 #### 🐳 Step 1: Create a Volume
@@ -37,7 +37,7 @@ docker volume inspect mydata         # 👉 Shows: "Mountpoint": "/var/lib/docke
 ```
 
 #### 🚀 Step 2: Run a Container with Volume
-```
+```hcl
 docker run -d \
   --name mycontainer \
   -v mydata:/app/data \
@@ -53,41 +53,40 @@ docker run -d \
  ### 📦 Real-Life Example
    * mydata = 📦 External hard drive ( Docker-managed storage in Linux)
    * /app/data = 📁 Folder inside container
-   * 👉 When you save files in /app/data : They are actually stored in mydata.
+   * 👉 When you save files in `/app/data` : They are actually stored in mydata.
    * 👉 Even if you delete the container and run again with same volume data will still exist 🎉
 
-
 ### 🐳 Where is Named Volume Data Stored?
-  * Data is stored on the host machine BUT it's managed by Docker, not by you ❗
+  * Data is stored on the `host machine` BUT it's managed by Docker, not by you ❗
   * ❗ BUT not in your normal folders., 📍 Exact Location On Linux : `/var/lib/docker/volumes/mydata/_data`
   * 👉 You don’t directly use or modify this path normally.
    
-  ✅ Named volumes = safe, persistent, Docker-managed storage. Perfect for databases!
+  ✅ Named volumes = `safe`, `persistent`, Docker-managed storage. `Perfect for databases`!
 
 ---
 
 ## 🟡 2. Anonymous Volumes (Temporary Storage)
- * These are similar to named volumes, but without a name. Docker assigns a random name (ID).
- * Anonymous Volume = 👉 A volume without a name, created automatically by Docker.
+ * These are similar to named volumes, but without a name. Docker assigns a `random name (ID)`.
+ * Anonymous Volume = 👉 A volume without a name, created `automatically by Docker`.
  * They are harder to manage but still store data outside the container.
- * 🎯 Best for: Short-term or one-time container usage (Harder to track and reuse)
+ * 🎯 Best for: Short-term or one-time container usage (`Harder to track `and `reuse`)
 
 #### 📌 Example:
-```
+```hcl
 docker run -d -v /app/data nginx
 ```
-* ➡️ “Create a volume automatically and mount it to /app/data”
+* ➡️ “Create a volume automatically and mount it to `/app/data`”
 * Docker generates a `randim ID` because we are not created volume name like named volume
 
 ---
 
 ## 🔵 3. Host Volumes (Bind Mounts)
- * 👉 Bind mounts link a specific folder from your host machine (your computer or EC2) to the container.
- * Useful for development or sharing files between host system and container. You control the file location.
+ * 👉 Bind mounts link a specific folder from your host machine (`your computer` or `EC2`) to the container.
+ * Useful for development or sharing files between `host system` and `container`. You control the file location.
  * Changes reflect immediately on both sides
 
 #### 📌 Example:
-```
+```hcl
 docker run -v /home/user/myfolder:/app/data myimage   # ➡️ “Link my local folder to the container folder”
 ```
  * `/home/user/myfolder`  → 📁 Folder on your host machine
@@ -95,11 +94,11 @@ docker run -v /home/user/myfolder:/app/data myimage   # ➡️ “Link my local 
  * `myimage`              → Your Docker image
 
 ### 📦 Where Docker Stores Data
-|      🧩 Type        |       📍 Where Data is Stored                                                       | 💡 Explanation                               |
-| -------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------- |
-| 📦 Named Volume     | 📂 Host machine (Docker internal path)  (`/var/lib/docker/volumes/mydata/_data`)    | 🐳 Managed by Docker, persistent & organized |
-| 📂 Bind Mount       | 🖥️ Host machine (your chosen folder)    ( `/home/user/myfolder`)                    | 🔧 Direct access to local files              |
-| 📁 Anonymous Volume | 📂 Host machine (Docker internal path)  (/var/lib/docker/volumes/<random-id>/_data) | ⚠️ Auto-created ID (8f3a9c2d4e...), hard to manage   |
+|      🧩 Type        |       📍 Where Data is Stored                                                         | 💡 Explanation                               |
+| -------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------- |
+| 📦 Named Volume     | 📂 Host machine (`Docker internal path`)  (`/var/lib/docker/volumes/mydata/_data`)    | 🐳 Managed by Docker, persistent & organized |
+| 📂 Bind Mount       | 🖥️ Host machine (your `chosen folder`)    ( `/home/user/myfolder`)                    | 🔧 Direct access to local files              |
+| 📁 Anonymous Volume | 📂 Host machine (`Docker internal path`)  (/var/lib/docker/volumes/<random-id>/_data) | ⚠️ Auto-created ID (8f3a9c2d4e...), hard to manage   |
 
 
 ---
