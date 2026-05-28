@@ -172,6 +172,7 @@ stage: FROM node:18 AS builder                 # Name stage
 copy: COPY --from=builder /app/build /out      # Copy from stage
 
 ```
+ * ⚡ Multi-stage builds are not only for frontend; they are a best practice for both `frontend` and `backend` Docker images.
 
 ---
 
@@ -179,13 +180,13 @@ copy: COPY --from=builder /app/build /out      # Copy from stage
 | #️⃣    | ❓ Question                                                    | ✅ Answer                                                                                              |
 | ------ | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | 1️⃣    | 🐳 What is a multi-stage build in Docker?                     | 👉 Technique using multiple `FROM` statements in one Dockerfile                                       |
-| 2️⃣    | 🎯 Main purpose of multi-stage builds?                        | 👉 Optimize image size and security                                                                   |
-| 3️⃣    | ⚡ Biggest advantage of multi-stage builds?                    | 👉 Final image contains only runtime files                                                            |
+| 2️⃣    | 🎯 Main purpose of multi-stage builds?                        | 👉 `Optimize image size` and `security`                                                                   |
+| 3️⃣    | ⚡ Biggest advantage of multi-stage builds?                    | 👉 Final image contains only `runtime files `                                                           |
 | 4️⃣    | 🧱 What keyword starts a new build stage?                     | 👉 `FROM`                                                                                             |
 | 5️⃣    | 🏷️ What does `AS builder` mean?                              | 👉 Names the build stage                                                                              |
 | 6️⃣    | 📦 Purpose of `COPY --from=builder`?                          | 👉 Copy artifacts from another stage                                                                  |
 | 7️⃣    | 🧠 Why are multi-stage builds important in DevOps?            | 👉 Faster, smaller, and secure deployments                                                            |
-| 8️⃣    | 📉 How do multi-stage builds reduce image size?               | 👉 Remove unnecessary build tools and dependencies                                                    |
+| 8️⃣    | 📉 How do multi-stage builds reduce image size?               | 👉 `Remove unnecessary build tools` and `dependencies `                                                   |
 | 9️⃣    | 🔐 How do multi-stage builds improve security?                | 👉 Smaller attack surface                                                                             |
 | 🔟     | 🛡️ What is attack surface?                                   | 👉 Total exposed software/vulnerabilities in image                                                    |
 | 1️⃣1️⃣ | ⚙️ What usually happens in builder stage?                     | 👉 Compile/build application                                                                          |
