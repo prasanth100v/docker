@@ -1,8 +1,8 @@
 # 🐳☁️ What is Docker Hub?
- * Docker Hub is a cloud-based registry service where you can store, share, and manage Docker container images—similar to GitHub for code.
- * It supports both public and private repositories.
+ * Docker Hub is a cloud-based registry service where you can `store`, `share`, and `manage` Docker container images—similar to GitHub for code.
+ * It supports both `public` and `private` repositories.
    * 🌍 Public Repositories (Free): Anyone can view and pull your images.
-   * 🔒 Private Repositories: Keep your images secure and restricted, with limited free access and more features available in paid plans.
+   * 🔒 Private Repositories: Keep your `images secure` and `restricted`, with limited free access and more features available in `paid plans`.
 
 ### 👉 Think of it like:
   * 📦 GitHub → for code
@@ -17,7 +17,6 @@
 | 🎯 Use Case    | 📦 Open-source images           | 🏢 Company / confidential apps |
 | 💰 Cost        | 🆓 Free                         | ⚠️ Limited free, paid for more |
 
-
 ## 🔑 Key Features
 | 🧩 Feature              | 💡 Description                                                 |
 | ----------------------- | --------------------------------------------------------------- |
@@ -26,39 +25,34 @@
 | ⬆️ Image Pushing        | 📤 Upload images using `docker push`  to upload in dockerhub  |
 | 🔐 Private Repositories | 🛡️ Keep images secure and restricted                          |
 
- * 💡 For beginners & public images → Docker Hub is perfect.
- * 💼 For private repos → Consider GitHub Container Registry (GHCR) or AWS ECR.
+ * 💡 For beginners & public images → `Docker Hub` is perfect.
+ * 💼 For private repos → Consider `GitHub Container Registry` (GHCR) or `AWS ECR`.
 
 ---
 
-
 # 🔑 Create DockerHub a Personal Access Token (PAT)
-  👉 A PAT is a secure alternative to a password used for authentication. recommended for CLI operations and CI/CD pipelines.
+  * 👉 A PAT is a secure `alternative to a password` used for `authentication`. recommended for CLI operations and CI/CD pipelines.
   
 ### 🧭 Step 1: Log in to Docker Hub  
    Go to `Docker Hub →  Account Settings →  Security →  New Access Token.`
 
 #### 📝 Fill in details:  
-  * 🏷️ Description : My CLI Token (e.g., for docker login).
+  * 🏷️ Description : My CLI Token (e.g., `for docker login`).
   * 🔒 Permissions:  
-    * Read & Write (for push/pull).
-    * Read Only (for just pull).  
-
- 👉 Click Generate.  
-
- ⚠️ Copy the token immediately! (❌ You won’t see it again).
-
+     * Read & Write (for `push/pull`).
+     * Read Only (for `just pull`).  
+  * 👉 Click Generate.
+  * ⚠️ Copy the token immediately! (❌ You won’t see it again).
 
 ### 🔐 Step 2: Use the Token for docker login  
-```
+```hcl
 docker login -u YOUR_DOCKERHUB_USERNAME  
 ```
  * 👉 When prompted for a password, paste the `PAT` (not your account password).
  * ✅ Now you can docker push and docker pull private images!
 
-
 ## 🔐 Is a password required for docker push?
- * ✅ Yes — a password is required, but you only need during login (username and password or personal access token).
+ * ✅ Yes — a password is required, but you `only need during login` (`username` and `password` or personal access token).
  * 👉 After a successful login, Docker stores your login credentials securely. No need to re-enter every time...
 
 ---
@@ -70,23 +64,23 @@ docker login -u YOUR_DOCKERHUB_USERNAME
   * ⬆️ Push image
 
 ### 🏷️ Step 1: Tag Image
-Without tagging, it doesn't know where to push the image.
-```
+* Without tagging, it doesn't know where to push the image.
+```hcl
 🏷️ docker tag my_image:latest username/my_image:latest  
 ```
-#### 👉 Format : `[ docker tag <local-image-name> <your-dockerhub-username>/<repo-name>:<tag> ]`
+* 👉 Format : `[ docker tag <local-image-name> <your-dockerhub-username>/<repo-name>:<tag> ]`
 
 ### 🔐 Step 2: Login
-```
+```hcl
 docker login -u YOUR_USERNAME
 ```
-👉 Enter: `Username` & `Password or Token 🔑`
+ * 👉 Enter: `Username` & `Password or Token 🔑`
 
 ### ⬆️ Step 3: Push Image
-```
+```hcl
 ⬆️ docker push username/my_image:latest        # 🎉 Your image is now on Docker Hub!
 ```
-> 👉 image with my `Docker Hub username` and push it using docker push
+ * 👉 image with my `Docker Hub username` and push it using `docker push`
 
 ---
 
@@ -94,5 +88,5 @@ docker login -u YOUR_USERNAME
  1. 👨‍💻 Build app → docker build
  2. 🏷️ Tag image
  3. ⬆️ Push to Docker Hub
- 4. 🌍 Deploy anywhere using docker pull
+ 4. 🌍 Deploy anywhere using `docker pull`
 
